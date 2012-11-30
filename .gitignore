@@ -21,11 +21,9 @@ proguard-project.txt
 *.ncb
 *.sdf
 *.opensdf
-Debug/
 Release/
+Debug/
 ipch/
 Projects/BitterSam1/android/.settings
-Debug.win32/
-Release.win32/
 [Tt]humbs.db
 *.user
