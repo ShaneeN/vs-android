@@ -9,6 +9,14 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   
   <!-- Compiler defaults -->
+  
+  <ItemDefinitionGroup>
+  <ClCompile>
+	<ProgramDataBaseFileName Condition="'%(ClCompile.ProgramDataBaseFileName)' == '' and
+		'$(PlatformToolsetVersion)' != ''">$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+	</ClCompile>
+  </ItemDefinitionGroup>
+
   <ItemDefinitionGroup>
     <ClCompile>
 

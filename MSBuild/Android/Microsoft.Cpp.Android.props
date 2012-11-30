@@ -12,6 +12,10 @@
   
   <!-- Bring in toolset props afterwards, since it's dependent on the envvars -->
   <Import Condition="(exists('$(VCTargetsPath)\Platforms\Android\PlatformToolsets\$(PlatformToolset)\Microsoft.Cpp.Android.$(PlatformToolset).props'))" Project="$(VCTargetsPath)\Platforms\Android\PlatformToolsets\$(PlatformToolset)\Microsoft.Cpp.Android.$(PlatformToolset).props"/>
+  
+  <PropertyGroup>
+	<TargetName Condition="'$(TargetName)' == ''">$(ProjectName)</TargetName>
+  </PropertyGroup>
     
   <!-- Debugger. TODO: Implement an Android 'debugger' which simply launches the app on the device -->
   <PropertyGroup>
